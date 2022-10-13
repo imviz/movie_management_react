@@ -34,7 +34,7 @@ function Admin() {
         // user list
         const [userz,setUser]=useState([])
     const userData=()=>{
-        axios.get('user/update/',{
+        axios.get('adminz/user/',{
             headers: {
             Authorization:'Bearer  '+user.access
         
@@ -50,7 +50,7 @@ function Admin() {
     console.log(user,'lll')
     // get all records of book that can seen student on home page 
     const getallpost=()=>{    
-        axios.get('user/poster/',{
+        axios.get('adminz/poster/',{
             headers: {
             Authorization:'Bearer  '+user.access
         
@@ -61,7 +61,7 @@ function Admin() {
         }
 // delete action
         const deletePost=()=>{    
-            axios.delete(`user/poster/${delId}/`,{
+            axios.delete(`adminz/poster/${delId}/`,{
                 headers: {
                 Authorization:'Bearer  '+user.access
             
@@ -83,7 +83,7 @@ function Admin() {
         }
 
     const deleteUser=()=>{    
-        axios.delete(`user/update/${delId}/`,{
+        axios.delete(`adminz/user/${delId}/`,{
             headers: {
             Authorization:'Bearer  '+user.access
         

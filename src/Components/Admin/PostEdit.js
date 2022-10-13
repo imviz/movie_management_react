@@ -21,7 +21,7 @@ function PostEdit() {
     }, [])
 
     const currentdata=()=>{
-        axios.get(`user/poster/${id}`,{
+        axios.get(`adminz/poster/${id}`,{
             headers: {
             Authorization:'Bearer  '+user.access
         
@@ -52,7 +52,7 @@ function PostEdit() {
       formdata.append("movie_description",description)
       formdata.append("type",type)
       
-        axios.patch(`user/poster/${id}/`,formdata,{
+        axios.patch(`adminz/poster/${id}/`,formdata,{
           headers: {
           Authorization:'Bearer  '+user.access
       

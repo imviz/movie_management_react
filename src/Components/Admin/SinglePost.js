@@ -27,7 +27,7 @@ function SinglePost() {
     const handleShow = () => setShow(true);
 
     const postData=()=>{
-        axios.get(`user/poster/${id}`,{
+        axios.get(`adminz/poster/${id}`,{
             headers: {
             Authorization:'Bearer  '+user.access
         
@@ -41,7 +41,7 @@ function SinglePost() {
     }
 
     const userdata=()=>{
-        axios.get(`user/update/`,{
+        axios.get(`adminz/user/`,{
             headers: {
             Authorization:'Bearer  '+user.access
         
@@ -53,7 +53,7 @@ function SinglePost() {
 
 
     const changez=()=>{
-        axios.patch(`user/change/${id}/`,{select},{
+        axios.patch(`adminz/change/${id}/`,{select},{
           headers: {
           Authorization:'Bearer  '+user.access
       
@@ -64,21 +64,21 @@ function SinglePost() {
             })
     } 
     const [visible, setVisible] = useState([])
-    const  checkVisible=(b,id)=>{
+    // const  checkVisible=(b,id)=>{
       
        
-          console.log('kk')
-          console.log(visible,'pipi',id,'pppopopo')
-          var f=visible.includes(id)
-          console.log("nokk",f)
-          if (f){
-            console.log('removing ')
-            setVisible(visible.replace('b'+id,''))
-          }else{
-        //    const filterz=
-        setVisible(visible+'b'+String(id))
-          }                 
-      }
+    //       console.log('kk')
+    //       console.log(visible,'pipi',id,'pppopopo')
+    //       var f=visible.includes(id)
+    //       console.log("nokk",f)
+    //       if (f){
+    //         console.log('removing ')
+    //         setVisible(visible.replace('b'+id,''))
+    //       }else{
+    //     //    const filterz=
+    //     setVisible(visible+'b'+String(id))
+    //       }                 
+    //   }
       const updates=()=>{
         console.log(visible,'dfdfadsf')
         changez(visible)
@@ -87,9 +87,7 @@ function SinglePost() {
 
       const [select,setSelect]=useState()
 
-     const setUp=()=>{
-        
-     }
+   
 
   return (
     <div align='center'>
