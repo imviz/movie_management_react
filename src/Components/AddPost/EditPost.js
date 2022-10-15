@@ -21,12 +21,12 @@ function EditPost() {
     }, [])
 
     const currentdata=()=>{
-        axios.get(`user/poster/${id}`,{
+        axios.get(`user/poster/${id}/`,{
             headers: {
             Authorization:'Bearer  '+user.access
         
         }}).then((res)=>{
-                console.log(res.data,'data')
+                console.log(res.data,'dataaaaaaaaa')
                 //  navigate('/home')
                 setName(res.data.movie_name)
                 setDescription(res.data.movie_description)

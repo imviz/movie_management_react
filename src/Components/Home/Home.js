@@ -120,7 +120,7 @@ function Home() {
             <CardMedia
                 component="img"
                 sx={{ width: 251,height:251,margin:'20px' }}
-                image={imageUrl+obj.image}
+                image={obj.image}
                 alt="Live from space album cover"
                 />
                 

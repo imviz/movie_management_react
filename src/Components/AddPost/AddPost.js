@@ -16,6 +16,7 @@ function AddPost() {
 
 
   const {user}=useSelector((state)=>state.auth)
+  console.log(user.id,'dff')
   const navigate=useNavigate()
   // for storing values
     const [name,setName]=useState('')   
@@ -80,13 +81,15 @@ const formValidation=()=>{
 
 // register calling
     const handler=(e)=>{
+      let userId=user.id
+      console.log(typeof userId,'sfdf');
       e.preventDefault()
       const formdata=new FormData()
       formdata.append('movie_name',name)
       formdata.append("movie_description",description)
       formdata.append("type",type)
       formdata.append("image",image)
-      formdata.append("user",user.id)
+      formdata.append("user",userId)
       const isValid = formValidation()
       if (isValid){      
         axios.post('user/poster/',formdata,{
@@ -143,7 +146,7 @@ const formValidation=()=>{
              {Object.keys(imageErr).map((key)=>{
                                  return <div style={{color:'red'}} >{imageErr[key]}</div> })}
             </div>   
-            <Button style={{marginTop:'40px'}} type='submit' fullWidth={true} className='button1' variant='outlined'>SIGN UP</Button><br /><br />
+            <Button style={{marginTop:'40px'}} type='submit' fullWidth={true} className='button1' variant='outlined'>Add Post</Button><br /><br />
             </form> 
           </Grid> 
         </Paper>

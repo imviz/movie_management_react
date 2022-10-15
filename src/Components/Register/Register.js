@@ -65,8 +65,8 @@ const formValidation=()=>{
   if (!password){
     passwordErr.short_fname = '* password  is a required field'
     isValid = false
-  }else if(password.trim().length <4){
-    passwordErr.short_fname = '* password contain minimum 4 charector '
+  }else if(password.trim().length <6){
+    passwordErr.short_fname = '* password contain minimum 6 charector '
   isValid = false
   }
 
@@ -74,8 +74,8 @@ const formValidation=()=>{
   if (!confirmPassword){
     confirmPasswordErr.short_fname = '* password  is a required field'
     isValid = false 
-  }else if(confirmPassword.trim().length <4){
-    confirmPasswordErr.short_fname = '* password contain minimum 4 charector '
+  }else if(confirmPassword.trim().length <6){
+    confirmPasswordErr.short_fname = '* password contain minimum 6 charector '
   isValid = false
   }
 
