@@ -53,7 +53,8 @@ function SinglePost() {
 
 
     const changez=()=>{
-        axios.patch(`adminz/change/${id}/`,{select},{
+      console.log(select);
+        axios.patch(`adminz/change/${id}/`,{'select':select},{
           headers: {
           Authorization:'Bearer  '+user.access
       
