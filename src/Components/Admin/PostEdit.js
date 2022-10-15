@@ -21,7 +21,7 @@ function PostEdit() {
     }, [])
 
     const currentdata=()=>{
-        axios.get(`adminz/poster/${id}`,{
+        axios.get(`adminz/poster/${id}/`,{
             headers: {
             Authorization:'Bearer  '+user.access
         

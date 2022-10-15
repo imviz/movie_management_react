@@ -27,12 +27,12 @@ function SinglePost() {
     const handleShow = () => setShow(true);
 
     const postData=()=>{
-        axios.get(`adminz/poster/${id}`,{
+        axios.get(`adminz/poster/${id}/`,{
             headers: {
             Authorization:'Bearer  '+user.access
         
         }}).then((res)=>{
-                console.log(res.data,)
+                console.log(res.data,'ddddd')
               setPost(res.data)
               setSelect(res.data.visibility)
                 
